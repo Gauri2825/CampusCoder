@@ -163,14 +163,14 @@ import streamlit as st
 
 # Image paths - update these with your actual paths
 girl_hostel_images = [
-    "C:\\Users\\GAURI\\OneDrive\\Desktop\\Campus Coder\\assets\\girl_hostel1.jpg",
-    "C:\\Users\\GAURI\\OneDrive\\Desktop\\Campus Coder\\assets\\girl_hostel2.jpg"
+    "assets/girl_hostel1.jpg"
+    "assets/girl_hostel2.jpg"
 ]
 
 boys_hostel_images = [
-    "C:\\Users\\GAURI\\OneDrive\\Desktop\\Campus Coder\\assets\\boys_hostel1.jpg",
-    "C:\\Users\\GAURI\\OneDrive\\Desktop\\Campus Coder\\assets\\boys_hostel2.jpg",
-    "C:\\Users\\GAURI\\OneDrive\\Desktop\\Campus Coder\\assets\\boys_hostel3.jpg"
+    "assets/boys_hostel1.jpg",
+    "assets/boys_hostel2.jpg",
+    "assets/boys_hostel3.jpg"
 ]
 
 # Create two columns

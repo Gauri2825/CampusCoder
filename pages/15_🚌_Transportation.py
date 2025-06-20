@@ -1,7 +1,14 @@
 import streamlit as st
 from utils.file import footer
+import os
 
 st.set_page_config(page_title="Transport Facilities | NKOCET", layout="wide")
+
+# Helper function to get correct file paths
+def get_file_path(filename):
+    """Get absolute path to file from assets folder"""
+    assets_dir = os.path.join(os.path.dirname(__file__), "assets")
+    return os.path.join(assets_dir, filename)
 
 st.markdown("""
 <style>
@@ -26,29 +33,39 @@ with cols[0]:
     - **Affordable monthly passes**  
     - **Bus routes cover all major areas**
                 """)
+
+with cols[1]:
+    try:
+        # Use relative path for image
+        st.image(
+            "assets/Transportation.jpg",  # Changed to relative path
+            caption="NKOCET College Bus",
+            use_container_width=True
+        )
+    except FileNotFoundError:
+        st.warning("Transportation image not found. Using placeholder.")
+        st.image(
+            "https://via.placeholder.com/600x400?text=College+Bus+Image",
+            caption="NKOCET College Bus (Placeholder)",
+            use_container_width=True
+        )
+
 # Fee Structure Download Section
 st.subheader("💸 Transport Fee Structure", divider='gray')
 
-fee_file_path = r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\Bus Charges for AY 2024-25.pdf"
+try:
+    # Use relative path for PDF
+    with open("assets/Bus Charges for AY 2024-25.pdf", "rb") as file:
+        st.download_button(
+            label="📥 Download Bus Fee Structure (PDF)",
+            data=file,
+            file_name="transport_fee_structure.pdf",
+            mime="application/pdf"
+        )
+except FileNotFoundError:
+    st.error("Fee structure PDF not found. Please contact the transport office.")
 
-with cols[1]:
-    st.image(
-        r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\Transportation.jpg",
-        caption="NKOCET College Bus",
-        use_container_width=True
-    )
-
-with open(fee_file_path, "rb") as file:
-    st.download_button(
-        label="📥 Download Bus Fee Structure (PDF)",
-        data=file,
-        file_name="transport_fee_structure.pdf",
-        mime="application/pdf"
-    )
-
-
-# st.markdown(f"*{route['stops']}*")
-
+# Rest of your contact information code remains the same...
 st.subheader("📞 Contact", divider='gray')
 st.markdown("""<div class="highlight-box"><h4>Transport Incharge</h4></div>""", unsafe_allow_html=True)
 st.markdown("""
