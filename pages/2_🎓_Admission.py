@@ -8,7 +8,7 @@ st.set_page_config(page_title="Admission | NKOCET", layout="wide")
 
 st.header("🎓 Admission Information", divider='rainbow')
 
-image_path = r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\CET admission.jpg"
+image_path = "assets/CET admission.jpg"
 if os.path.exists(image_path):
   img = Image.open(image_path)
   st.image(img, use_container_width=True, caption="NKOCET Admission 2025-26")
@@ -137,7 +137,7 @@ st.caption("Cut-off ranges are based on CAP rounds (MHT-CET percentile). JEE and
 st.subheader("💰 Fee Structure (2025-26)")
 import os
 from PIL import Image
-pdf_path = r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\FY fee structure for AY 2025-26.pdf"
+pdf_path = "assets/FY fee structure for AY 2025-26.pdf"
 if os.path.exists(pdf_path):
     with open(pdf_path, "rb") as f:
         pdf_bytes = f.read()
