@@ -58,7 +58,7 @@ def set_blurred_background(image_path, blur_radius=5):
     except Exception as e:
         st.error(f"Error setting background: {e}")
 
-set_blurred_background("C:/Users/GAURI/OneDrive/Desktop/Campus Coder/assets/header_img4.jpg", blur_radius=10)
+set_blurred_background("assets/header_img4.jpg", blur_radius=10)
 
 # 🌟 Main Header
 st.header("🎗️ World-Class Infrastructure", divider='rainbow')
