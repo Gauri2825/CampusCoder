@@ -65,8 +65,9 @@ with st.expander("👥 Placement Team"):
 
 st.header("💼 Placement Cell", divider='rainbow')
 st.subheader("📝 PPW (PrePlacement Workshop)")# Add a local placement image
-local_image_path = r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\placement.jpg"  # Update with your actual image filename
+local_image_path = "assets/placement.jpg"
 st.image(local_image_path, caption="Recent Placement Event", use_container_width=True)
+
 
 # Section 1: Key Metrics
 st.subheader("📊 Placement Highlights")
