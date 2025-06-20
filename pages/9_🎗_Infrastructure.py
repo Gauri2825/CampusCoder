@@ -17,40 +17,40 @@ def set_blurred_background(image_path, blur_radius=5):
         blurred_img.save(buffered, format="JPEG")
         img_str = base64.b64encode(buffered.getvalue()).decode()
         st.markdown(
-            """
+            f"""
             <style>
-            .stApp {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #22223b;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            }
-            .main .block-container {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 3rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            }
-            h1 {
-            color: #FFD700 !important;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-            }
-            h2 {
-            color: #00BFFF !important;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-            }
-            h3 {
-            color: #90EE90 !important;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-            }
-            .stMarkdown p, .stMarkdown li {
-            color: white !important;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            }
+            .stApp {{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("data:image/jpeg;base64,{img_str}");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }}
+            .main .block-container {{
+                background-color: rgba(255, 255, 255, 0.05);
+                border-radius: 15px;
+                padding: 3rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            }}
+            h1 {{
+                color: #FFD700 !important;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            }}
+            h2 {{
+                color: #00BFFF !important;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            }}
+            h3 {{
+                color: #90EE90 !important;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+            }}
+            .stMarkdown p, .stMarkdown li {{
+                color: white !important;
+                font-size: 1.1rem;
+                line-height: 1.6;
+            }}
             </style>
             """,
             unsafe_allow_html=True
