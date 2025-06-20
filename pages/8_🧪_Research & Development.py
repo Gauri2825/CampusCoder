@@ -154,19 +154,23 @@ st.markdown(f"""
 st.subheader("📄 Research Documents")
 
 pdf_files = {
-    "Patent Data": r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\Patent data.pdf",
-    "Research Publications and Awards": r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\Research publications and awards.pdf"
-}
+    "Patent Data": "assets/Patent data.pdf",
+    "Research Publications and Awards": "assets/Research publications and awards.pdf"}
+
 
 for name, path in pdf_files.items():
     st.markdown(f"#### {name}")
-    with open(path, "rb") as f:
-        pdf_bytes = f.read()
+    if Path(path).exists():
+        with open(path, "rb") as f:
+            pdf_bytes = f.read()
         st.download_button(
             label=f"Download {name}",
             data=pdf_bytes,
             file_name=Path(path).name,
             mime="application/pdf"
         )
+    else:
+        st.warning(f"{name} not found. Please contact the R&D office.")
+
         # st.pdf(pdf_bytes)  # Removed because Streamlit has no st.pdf method
 footer()
