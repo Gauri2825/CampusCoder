@@ -12,7 +12,7 @@ tab1, tab2 = st.tabs(["🏫 Study Abroad Program", "🤝 Partner Universities & 
 with tab1:
     #Introduction section
     st.subheader("Welcome to Our Study Abroad Program")
-    video_path = r"C:\Users\GAURI\OneDrive\Desktop\Campus Coder\assets\Metan Sir .mp4"
+    video_path = video_path = "assets/Metan Sir.mp4"
     with open(video_path, "rb") as video_file:
         video_bytes = video_file.read()
     st.video(video_bytes, format="video/mp4", start_time=0)
