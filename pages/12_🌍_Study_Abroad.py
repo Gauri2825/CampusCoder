@@ -12,11 +12,11 @@ tab1, tab2 = st.tabs(["🏫 Study Abroad Program", "🤝 Partner Universities & 
 
 with tab1:
     #Introduction section
-    st.subheader("Welcome to Our Study Abroad Program")
-    video_path = r"assets\Metan_Sir.mp4"
-    with open(video_path, "rb") as video_file:
-        video_bytes = video_file.read()
-    st.video(video_bytes, format="video/mp4", start_time=0)
+    # st.subheader("Welcome to Our Study Abroad Program")
+    # video_path = r"assets\Metan_Sir.mp4"
+    # with open(video_path, "rb") as video_file:
+    #     video_bytes = video_file.read()
+    # st.video(video_bytes, format="video/mp4", start_time=0)
     
     st.markdown("""
     Orchid College is committed to providing global exposure to its students through various international programs.
