@@ -696,7 +696,7 @@ def about_us_section():
             </div>
             <div class="about-flex-item">
                 <div class="icon-container">
-                <span class="icon">👁</span>
+                <span class="icon">👁️</span>
                 </div>
                 <h3>Our Vision</h3>
                 <p>To be a globally recognized institution that nurtures talent and fosters innovation in engineering and technology.
@@ -718,7 +718,7 @@ def about_us_section():
             </div>
             <div class="about-flex-item">
                 <div class="icon-container">
-                <span class="icon">❤</span>
+                <span class="icon">❤️</span>
                 </div>
                 <h3>Core Values</h3>
                 <p>Integrity, Excellence, Innovation, Collaboration, and Social Responsibility guide our institution.
@@ -886,10 +886,10 @@ pages = [
     ("🏫 Departments", "4_🏫_Departments"),
     ("🎉 Events", "5_🎉_Events_Culture"),
     ("📚 Library", "6_📚_Library"),
-    ("🗺 Location", "7_🗺_Location"),
+    ("🗺️ Location", "7_🗺_Location"),
     ("🧪 Research & Development", "8_🧪_Research & Development"),
-    ("🎗 Infrastructure", "9_🎗_Infrastructure"),
-    ("🖼 Photo Gallery", "10_🖼_Photo_Gallery"),
+    ("🎗️ Infrastructure", "9_🎗_Infrastructure"),
+    ("📸 Photo Gallery", "10_🖼_Photo_Gallery"),
     ("💼 Placements", "11_💼_Placements"),
     ("🌍 Study Abroad", "12_🌍_Study_Abroad"),
     ("⚽ Sports", "13_⚽_Sports"),

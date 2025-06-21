@@ -163,7 +163,7 @@ import streamlit as st
 
 # Image paths - update these with your actual paths
 girl_hostel_images = [
-    "assets/girl_hostel1.jpg"
+    "assets/girl_hostel1.jpg",
     "assets/girl_hostel2.jpg"
 ]
 
